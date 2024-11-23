@@ -15,10 +15,6 @@ class MainWindowFashionShop extends JFrame{
     private JButton delete;
     private JButton placeOrder;
 
-    
-
-   
-
     MainWindowFashionShop(){
         orderCollection=new OrderCollection();
 
