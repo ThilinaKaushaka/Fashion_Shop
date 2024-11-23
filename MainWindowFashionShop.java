@@ -26,15 +26,9 @@ class MainWindowFashionShop extends JFrame{
         setBackground(new Color(256-244-244));
 
         JPanel titlePanel=new JPanel(new GridLayout(1,1));
-        
-        
-      
-        
+              
         add("Center",new JLabel(new ImageIcon("photo.png")));    
         titlePanel.add(new JLabel(new ImageIcon("t.png")));
-
-        
-
 
         ButtonPanel = new JPanel(new GridLayout(5,1));
         
@@ -44,8 +38,6 @@ class MainWindowFashionShop extends JFrame{
         JPanel reportPanel=new JPanel(new GridLayout(2,1));
         JPanel deletePanel=new JPanel(new GridLayout(2,1));
         
-
-
         search=new JButton("Search");
         search.setFont(new Font("Arial Bold",1,20));
         search.setBackground(Color.white);
@@ -102,8 +94,6 @@ class MainWindowFashionShop extends JFrame{
         add("West",p1);
         add("South",copyrightPanel);
 
-          
-
         delete.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
 				DeleteOrderForm d1= new DeleteOrderForm(orderCollection);
@@ -127,9 +117,6 @@ class MainWindowFashionShop extends JFrame{
 
     }
     
-
-
-
 public static void main(String[] args) {
     new MainWindowFashionShop().setVisible(true);
 }

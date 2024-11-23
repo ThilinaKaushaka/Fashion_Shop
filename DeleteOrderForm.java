@@ -61,10 +61,6 @@ class DeleteOrderForm extends JFrame{
         BottomPanel.add(btnDelete);
         add("South",BottomPanel);
 
-
-
-
-
         JPanel labelPanel=new JPanel(new GridLayout(13,1));
 
         lblOrderID=new JLabel("    Enter Order ID :    ");
@@ -112,11 +108,7 @@ class DeleteOrderForm extends JFrame{
         JPanel p55=new JPanel();
         labelPanel.add(p55);
 
-
-
         add("West",labelPanel);
-
-
 
         JPanel textPanel=new JPanel(new GridLayout(13,1));
         txtOrderID=new JTextField(10);
@@ -178,16 +170,11 @@ class DeleteOrderForm extends JFrame{
 
         add("East",WestPanel);
 
-
-
-
-
         btnBack.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
 				dispose();
 			}
 		});
-
 
         btnSearch.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
