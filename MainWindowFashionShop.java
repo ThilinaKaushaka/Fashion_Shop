@@ -111,11 +111,33 @@ class MainWindowFashionShop extends JFrame{
 
         search.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
-				new searchOrderForm(orderCollection).setVisible(true); 
+				Object[] options = {"Search Customer","Search Order","Cancel" };
+                int option = JOptionPane.showOptionDialog(null, "Please select the option", "Search Options",JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (option==0) {
+                    new searchCustomerForm(orderCollection).setVisible(true);
+                }else if (option==1) {
+                    new searchOrderForm(orderCollection).setVisible(true);
+                }else{
+                    
+                }
+                
+
+
+
 			}
 		});
 
+
+
+
+
+
     }
+
+
+
+
+
     
 public static void main(String[] args) {
     new MainWindowFashionShop().setVisible(true);

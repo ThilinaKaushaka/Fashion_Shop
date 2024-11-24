@@ -2,7 +2,7 @@ import javax.swing.table.*;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.*;
-
+ 
 
 import java.awt.*;
 import java.awt.event.*;
@@ -27,9 +27,6 @@ class searchOrderForm extends JFrame{
     private JLabel lbl_qty;
     private JLabel lbl_amount;
     private JLabel lbl_status;
-
-
-
 
 
     searchOrderForm(OrderCollection orderCollection){

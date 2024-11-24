@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class OrderCollection {
     private int ID;
 
@@ -122,6 +124,87 @@ class OrderCollection {
         
     }
 
+    private int[] extendArray(int [] ar){
+        int [] temp=new int[ar.length+1];
+        for (int i = 0; i < ar.length; i++) {
+            temp[i]=ar[i];
+        }
+        return temp;
+    }
 
+
+    private int[] createIndexArray(String customerID){
+        int [] indexArray=new int[0];
+
+        for (int i = 0; i < orderArray.length; i++) {
+            if (orderArray[i].getCustomerID().equalsIgnoreCase(customerID)) {
+                indexArray= extendArray(indexArray);
+                indexArray[indexArray.length-1]=i;
+            }
+        }
+
+        return indexArray;
+    }
+
+    public SQA_object [] searchCustomer(String customerID){
+        int [] indexArray=createIndexArray(customerID);
+        Order []tempOrderArray=toOrderArray();
+
+        SQA_object [] array={new SQA_object("XS", 0,0),new SQA_object("S", 0,0),new SQA_object("M", 0,0),new SQA_object("L", 0,0),new SQA_object("XL", 0,0),new SQA_object("XXL", 0,0)};
+
+        for (int i = 0; i < indexArray.length; i++) {
+            if(tempOrderArray[indexArray[i]].getSize().equalsIgnoreCase("XS")) {
+                array[0].plusAmount(tempOrderArray[indexArray[i]].getAmount());
+                array[0].plusQty(tempOrderArray[indexArray[i]].getQty());
+            
+            }else if (tempOrderArray[indexArray[i]].getSize().equalsIgnoreCase("S")) {
+                array[1].plusAmount(tempOrderArray[indexArray[i]].getAmount());
+                array[1].plusQty(tempOrderArray[indexArray[i]].getQty());
+            
+            }else if (tempOrderArray[indexArray[i]].getSize().equalsIgnoreCase("M")) {
+                array[2].plusAmount(tempOrderArray[indexArray[i]].getAmount());
+                array[2].plusQty(tempOrderArray[indexArray[i]].getQty());
+            
+            }else if (tempOrderArray[indexArray[i]].getSize().equalsIgnoreCase("L")) {
+                array[3].plusAmount(tempOrderArray[indexArray[i]].getAmount());
+                array[3].plusQty(tempOrderArray[indexArray[i]].getQty());
+            
+            }else if (tempOrderArray[indexArray[i]].getSize().equalsIgnoreCase("XL"))  {
+                array[4].plusAmount(tempOrderArray[indexArray[i]].getAmount());
+                array[4].plusQty(tempOrderArray[indexArray[i]].getQty());
+            
+            }else if (tempOrderArray[indexArray[i]].getSize().equalsIgnoreCase("XXL")) {
+                array[5].plusAmount(tempOrderArray[indexArray[i]].getAmount());
+                array[5].plusQty(tempOrderArray[indexArray[i]].getQty());
+            }
+        }
+
+        return sortQAS(array);
+
+    }
+
+
+    private SQA_object[] sortQAS(SQA_object [] ar){       
+		for(int i=ar.length-1; i>=0; i--){
+			for(int j=0; j<i; j++){
+				if(ar[j].getAmount()<ar[j+1].getAmount()){
+					SQA_object t=ar[j];
+					ar[j]=ar[j+1];
+					ar[j+1]=t;
+				}
+				
+			}
+		}
+        return ar;
+    }
+
+    public boolean isHaveCustomerID(String customerID){
+        for (int i = 0; i < orderArray.length; i++) {
+            if (orderArray[i].getCustomerID().equalsIgnoreCase(customerID)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
