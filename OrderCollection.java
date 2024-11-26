@@ -109,7 +109,7 @@ class OrderCollection {
             tempArray[i]=orderArray[i];
         }
         orderArray=tempArray;
-
+        System.out.println(orderArray.length);
         return true;
     }
 

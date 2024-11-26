@@ -218,6 +218,7 @@ class DeleteOrderForm extends JFrame{
                             lbl_status.setText("");
                         
                             deleteIndex=-1;
+                            
                         }else{
                             JOptionPane.showMessageDialog(textPanel,"Error..");
                             txtOrderID.setText("");

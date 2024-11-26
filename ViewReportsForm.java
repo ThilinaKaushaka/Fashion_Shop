@@ -28,7 +28,7 @@ class ViewReportsForm extends JFrame{
 
         setSize(600,230);
         setTitle("");
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(1);
         setLocationRelativeTo(null);
         setTitle("View Reports");
 
@@ -160,7 +160,9 @@ class ViewReportsForm extends JFrame{
 
         btnAllOrders.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
-				new AllOrdersForm(orderCollection).setVisible(true);
+				AllOrdersForm a1=new AllOrdersForm(orderCollection);
+                a1.createAllTablr();
+                a1.setVisible(true);
 			}
 		});
 

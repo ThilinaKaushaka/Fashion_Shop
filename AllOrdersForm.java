@@ -47,6 +47,24 @@ class AllOrdersForm extends JFrame{
 
         
         
+               
+                    
+
+           
+        btnBack.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){           
+                dispose();
+   
+			}
+
+		});
+       
+       
+      
+    }
+
+
+    public void createAllTablr(){
         Order [] array=orderCollection.allOrder();
 
         
@@ -66,20 +84,9 @@ class AllOrdersForm extends JFrame{
             tblCustomer.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
         }
 
-        tblCustomer.setRowHeight(64);       
-                    
-
-           
-        btnBack.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent evt){           
-                dispose();
-   
-			}
-
-		});
-       
-       
-      
+        tblCustomer.setRowHeight(64);
     }
+
+
 
 }    
