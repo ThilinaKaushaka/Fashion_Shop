@@ -1,15 +1,26 @@
 import java.util.Arrays;
 
 class OrderCollection {
+    private static OrderCollection orderCollentionObject;
+    
     private int ID;
 
     private Order [] orderArray;
 
-
-    OrderCollection(){
+    
+    private OrderCollection(){
         orderArray = new Order[0];
         ID=1;
     }
+
+    public static OrderCollection getOrderCollection(){
+        if(orderCollentionObject==null){
+            orderCollentionObject=new OrderCollection();
+        }
+
+        return orderCollentionObject;
+    }
+
 
 
     //add order

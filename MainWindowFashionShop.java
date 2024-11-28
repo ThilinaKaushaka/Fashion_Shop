@@ -16,7 +16,7 @@ class MainWindowFashionShop extends JFrame{
     private JButton placeOrder;
 
     MainWindowFashionShop(){
-        orderCollection=new OrderCollection();
+        orderCollection=OrderCollection.getOrderCollection();
 
 
         setSize(600,530);

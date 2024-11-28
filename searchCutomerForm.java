@@ -81,7 +81,7 @@ class searchCustomerForm extends JFrame{
 				dispose();
 			}
 		});
-
+      
         btnSearch.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
                 String customerID=txtCutomerID.getText();

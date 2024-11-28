@@ -218,12 +218,7 @@ class DeleteOrderForm extends JFrame{
                             lbl_status.setText("");
                         
                             deleteIndex=-1;
-                            Order []or=orderCollection.toOrderArray();
-                            for (int i = 0; i < orderCollection.toOrderArray().length; i++)
-							{
-								System.out.println(or[i].getCustomerID());
-								System.out.println("===========");
-							}
+                            
 							
                         }else{
                             JOptionPane.showMessageDialog(textPanel,"Error..");
