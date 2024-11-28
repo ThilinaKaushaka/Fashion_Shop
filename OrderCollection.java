@@ -104,8 +104,11 @@ class OrderCollection {
     //delete order
     public boolean deleteOrder(int index){
         Order [] tempArray=new Order[orderArray.length-1];
-        for (int i = 0; i < tempArray.length; i++) {
-            if(i==index)continue;
+        L1:for (int i = 0; i < tempArray.length; i++) {
+            if(i>=index){
+				tempArray[i]=orderArray[i+1];
+				continue L1;
+			}	
             tempArray[i]=orderArray[i];
         }
         orderArray=tempArray;
