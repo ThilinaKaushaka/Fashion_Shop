@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 class ViewCustomersNoOrder extends JFrame{
 
-    private OrderCollection orderCollection;    
+    private Collection orderCollection;    
     private JButton btnBack;
     
     private JTable tblCustomer;
@@ -14,7 +14,7 @@ class ViewCustomersNoOrder extends JFrame{
 
     private JLabel total;
 
-    ViewCustomersNoOrder(OrderCollection orderCollection){
+    ViewCustomersNoOrder(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,530);

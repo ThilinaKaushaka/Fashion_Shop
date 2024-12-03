@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 class DeleteOrderForm extends JFrame{
-    private OrderCollection orderCollection;
+    private Collection orderCollection;
     
     private JButton btnBack;
     private JButton btnDelete;
@@ -35,7 +35,7 @@ class DeleteOrderForm extends JFrame{
     private int deleteIndex;
 
 
-    DeleteOrderForm(OrderCollection orderCollection){
+    DeleteOrderForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,530);

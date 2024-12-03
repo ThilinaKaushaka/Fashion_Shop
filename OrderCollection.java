@@ -4,8 +4,7 @@ interface Collection{
     public static OrderCollection getOrderCollection(){
         return null;
 	}
-    public boolean addOrder(Order order);
-    
+    public boolean addOrder(Order order);   
     public String setOrderID();
     public boolean isValidCustomerID(String customerID);
     public boolean isValidSize(String size);
@@ -15,13 +14,9 @@ interface Collection{
     public int contains(String id);
     public Order search(String id);
     public boolean deleteOrder(int index);
-    public boolean statusChange(int index,int status);
-    
-    public SQA_object [] searchCustomer(String customerID);
-    
-    public boolean isHaveCustomerID(String customerID);
-    
-    
+    public boolean statusChange(int index,int status);   
+    public SQA_object [] searchCustomer(String customerID);    
+    public boolean isHaveCustomerID(String customerID);   
     public CQA_object [] createCustomersDataArray();
     public CQA_object[] sortCQA(CQA_object [] ar);
     public SQA_object[] itemByQtyOrAmount(boolean Lc);
@@ -30,25 +25,19 @@ interface Collection{
 }
 
 class OrderCollection implements Collection {
-    private static OrderCollection orderCollentionObject;
-    
+    private static OrderCollection orderCollentionObject;   
     private int ID;
-
     private Order [] orderArray;
-
     
     private OrderCollection(){
         orderArray = new Order[0];
-        ID=1;
-
-        
+        ID=1;        
     }
 
     public static OrderCollection getOrderCollection(){
         if(orderCollentionObject==null){
             orderCollentionObject=new OrderCollection();
         }
-
         return orderCollentionObject;
     }
 

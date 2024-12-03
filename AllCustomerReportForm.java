@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 class AllCustomerReportForm extends JFrame{
 
-    private OrderCollection orderCollection;    
+    private Collection orderCollection;    
     private JButton btnBack;
     
     private JTable tblCustomer;
@@ -14,7 +14,7 @@ class AllCustomerReportForm extends JFrame{
 
     private JLabel total;
 
-    AllCustomerReportForm(OrderCollection orderCollection){
+    AllCustomerReportForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(900,530);

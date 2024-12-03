@@ -6,14 +6,14 @@ import java.awt.event.*;
 
 class AllOrdersSortForm extends JFrame{
 
-    private OrderCollection orderCollection;    
+    private Collection orderCollection;    
     private JButton btnBack;
     
     private JTable tblCustomer;
     private DefaultTableModel dtm;
 
 
-    AllOrdersSortForm(OrderCollection orderCollection){
+    AllOrdersSortForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,530);

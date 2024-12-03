@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 class searchCustomerForm extends JFrame{
 
-    private OrderCollection orderCollection;    
+    private Collection orderCollection;    
     private JButton btnBack;
     private JButton btnSearch;
     private JLabel lblCustomerID;
@@ -16,7 +16,7 @@ class searchCustomerForm extends JFrame{
 
     private JLabel total;
 
-    searchCustomerForm(OrderCollection orderCollection){
+    searchCustomerForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,530);

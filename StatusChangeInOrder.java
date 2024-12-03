@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 class StatusChangeInOrder extends JFrame {
-    private OrderCollection orderCollection;
+    private Collection orderCollection;
 
     private JButton btnBack;
     private JButton btnChaneStatus;
@@ -30,7 +30,7 @@ class StatusChangeInOrder extends JFrame {
 
     private int changeIndex;
 
-    StatusChangeInOrder(OrderCollection orderCollection) {
+    StatusChangeInOrder(Collection orderCollection) {
         this.orderCollection = orderCollection;
 
         setSize(600, 530);

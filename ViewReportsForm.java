@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 class ViewReportsForm extends JFrame{
-    private OrderCollection orderCollection;
+    private Collection orderCollection;
     
     private JButton btnBack;
 
@@ -23,7 +23,7 @@ class ViewReportsForm extends JFrame{
     private JButton btnAllOrders;
 
 
-    ViewReportsForm(OrderCollection orderCollection){
+    ViewReportsForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,230);

@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 class MainWindowFashionShop extends JFrame{
-    private OrderCollection orderCollection;
+    private Collection orderCollection;
     
     private JPanel ButtonPanel;
     

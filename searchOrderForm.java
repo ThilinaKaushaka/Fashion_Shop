@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 class searchOrderForm extends JFrame{
-    private OrderCollection orderCollection;
+    private Collection orderCollection;
     
     private JButton btnBack;
     private JButton btnSearch;
@@ -29,7 +29,7 @@ class searchOrderForm extends JFrame{
     private JLabel lbl_status;
 
 
-    searchOrderForm(OrderCollection orderCollection){
+    searchOrderForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,530);

@@ -11,7 +11,7 @@ import java.awt.event.*;
 
 
 class PlaceOrderForm extends JFrame{
-    private OrderCollection orderCollection;
+    private Collection orderCollection;
 
     private JLabel lblOrderID;
     private JLabel lblCustomerID;
@@ -30,7 +30,7 @@ class PlaceOrderForm extends JFrame{
     private JButton btnBack;
     private JButton btnPlace;
 
-    PlaceOrderForm(OrderCollection orderCollection){
+    PlaceOrderForm(Collection orderCollection){
         this.orderCollection=orderCollection;
 
         setSize(600,530);
